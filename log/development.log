@@ -4304,3 +4304,15 @@ Processing by PostsController#edit as HTML
 Completed 200 OK in 19ms (Views: 15.3ms | ActiveRecord: 0.4ms)
 
 
+Started PATCH "/posts/20" for 76.76.92.90 at 2020-08-27 19:24:48 +0000
+Cannot render console from 76.76.92.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MQP3fbX32LjeVZZT+FpdafFs56d6Ai7LXayW7+5FM9WTKg/YVaFx4oHP6uDCE2rZeiU4YLlNppNuiVov19SYrw==", "post"=>{"author_id"=>"4", "title"=>"Bird", "description"=>"small and evil"}, "commit"=>"Update Post", "id"=>"20"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "posts" SET "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["description", "small and evil"], ["updated_at", "2020-08-27 19:24:48.864194"], ["id", 20]]
+  [1m[35m (80.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://165.227.60.187:37099/posts/20
+Completed 302 Found in 85ms (ActiveRecord: 80.8ms)
+
+
